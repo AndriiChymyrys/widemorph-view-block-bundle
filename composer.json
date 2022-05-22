@@ -1,0 +1,8 @@
+{
+    "name": "widemorph/morph-view-block-bundle",
+    "autoload": {
+        "psr-4": {
+            "WideMorph\\Morph\\Bundle\\MorphViewBlockBundle\\": ""
+        }
+    }
+}

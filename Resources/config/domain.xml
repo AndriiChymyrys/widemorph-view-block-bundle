@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockManager"/>
+        <service id="WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockManagerInterface"
+                 alias="WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockManager"/>
+
+        <service id="WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Handler\BlockRenderEventHandler">
+            <argument type="service"
+                      key="$blockManager"
+                      id="WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockManagerInterface"/>
+            <argument type="service"
+                      key="$twig"
+                      id="Twig\Environment"/>
+        </service>
+        <service id="WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Handler\BlockRenderEventHandlerInterface"
+                 alias="WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Handler\BlockRenderEventHandler"/>
+    </services>
+</container>
