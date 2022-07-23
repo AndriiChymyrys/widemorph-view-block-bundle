@@ -22,6 +22,7 @@ class BlockCompilerPass implements CompilerPassInterface
     {
         $blockManager = $container->getDefinition(BlockManager::class);
 
+        // TODO: Add BlockInterface to autoconfigure
         foreach ($container->findTaggedServiceIds('morph.view.block') as $id => $tags) {
             $blockManager->addMethodCall('addBlock', [$container->getDefinition($id)]);
         }

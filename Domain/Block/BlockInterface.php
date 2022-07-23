@@ -11,6 +11,9 @@ namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block;
  */
 interface BlockInterface
 {
+    /** @var string */
+    public const SERVICE_TAG_NAME = 'morph.view.block';
+
     /**
      * @return int
      */
