@@ -27,7 +27,7 @@ class BlockManager implements BlockManagerInterface
     /**
      * {@inheritDoc}
      */
-    public function issetBlockForName(string $blockName): bool
+    public function registerBlockForName(string $blockName): bool
     {
         return isset($this->blocks[$blockName]);
     }

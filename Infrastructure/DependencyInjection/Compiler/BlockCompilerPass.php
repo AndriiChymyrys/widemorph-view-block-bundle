@@ -7,6 +7,7 @@ namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Infrastructure\DependencyI
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockManager;
+use WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockInterface;
 
 /**
  * Class BlockCompilerPass
@@ -22,8 +23,7 @@ class BlockCompilerPass implements CompilerPassInterface
     {
         $blockManager = $container->getDefinition(BlockManager::class);
 
-        // TODO: Add BlockInterface to autoconfigure
-        foreach ($container->findTaggedServiceIds('morph.view.block') as $id => $tags) {
+        foreach ($container->findTaggedServiceIds(BlockInterface::SERVICE_TAG_NAME) as $id => $tags) {
             $blockManager->addMethodCall('addBlock', [$container->getDefinition($id)]);
         }
     }

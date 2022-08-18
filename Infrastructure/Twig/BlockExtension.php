@@ -33,7 +33,7 @@ class BlockExtension extends AbstractExtension
     public function getFunctions()
     {
         return [
-            new TwigFunction('morph_block_render', [$this, 'blockRender']),
+            new TwigFunction('morph_block_render', [$this, 'blockRender'], ['is_safe' => ['all']]),
         ];
     }
 
@@ -45,7 +45,7 @@ class BlockExtension extends AbstractExtension
      */
     public function blockRender(string $blockName, ?array $options = []): string
     {
-        if (!$this->domainInteraction->getBlockManager()->issetBlockForName($blockName)) {
+        if (!$this->domainInteraction->getBlockManager()->registerBlockForName($blockName)) {
             // Do not dispatch event when there is no block registered for $blockName
             return '';
         }

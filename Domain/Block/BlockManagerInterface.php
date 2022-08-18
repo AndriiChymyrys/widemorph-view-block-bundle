@@ -23,7 +23,7 @@ interface BlockManagerInterface
      *
      * @return bool
      */
-    public function issetBlockForName(string $blockName): bool;
+    public function registerBlockForName(string $blockName): bool;
 
     /**
      * @param BlockInterface $block
