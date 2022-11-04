@@ -29,4 +29,4 @@
    ```
 2. Add twig function call for block render `{{ morph_block_render('morph.test') }}`
 3. You can pass second parameter to twig function like `{{ morph_block_render('morph.test', {'param one': value}) }}`
-   and this parameter will be passed in twig `render` function and you can use them in you template.
+   and this parameter will be passed in twig `render` function, and you can use them in your template.
