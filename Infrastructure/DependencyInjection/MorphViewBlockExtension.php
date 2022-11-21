@@ -8,7 +8,7 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\HttpKernel\DependencyInjection\Extension;
-use WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockInterface;
+use WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract\BlockInterface;
 
 /**
  * Class MorphViewBlockExtension

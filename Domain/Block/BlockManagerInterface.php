@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block;
 
+use WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract\BlockInterface;
+
 /**
  * Class BlockManagerInterface
  *

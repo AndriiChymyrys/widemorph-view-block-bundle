@@ -7,7 +7,7 @@ namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Infrastructure\DependencyI
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockManager;
-use WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockInterface;
+use WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract\BlockInterface;
 
 /**
  * Class BlockCompilerPass

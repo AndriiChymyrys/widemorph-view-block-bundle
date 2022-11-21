@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block;
+namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract;
 
 /**
  * Class BlockInterface
  *
- * @package WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block
+ * @package WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract
  */
 interface BlockInterface
 {

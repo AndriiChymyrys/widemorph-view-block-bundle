@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block;
+namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract;
 
 /**
  * Class AbstractBlock
  *
- * @package WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block
+ * @package WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract
  */
 abstract class AbstractBlock implements BlockInterface
 {

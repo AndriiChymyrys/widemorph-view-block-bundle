@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block;
 
+use WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract\BlockInterface;
+
 /**
  * Class BlockManager
  *
@@ -37,8 +39,8 @@ class BlockManager implements BlockManagerInterface
      */
     public function addBlock(BlockInterface $block): void
     {
-        if (!isset($this->blocks[$block->getBlockName()])) {
-            $this->blocks[$block->getBlockName()][] = $block;
+        if (!isset($this->blocks[$block->getBlockName()][get_class($block)])) {
+            $this->blocks[$block->getBlockName()][get_class($block)] = $block;
 
             $this->sortByPriority($this->blocks[$block->getBlockName()]);
         }
@@ -51,7 +53,7 @@ class BlockManager implements BlockManagerInterface
      */
     protected function sortByPriority(array &$array): void
     {
-        usort($array, static function (BlockInterface $a, BlockInterface $b) {
+        uasort($array, static function (BlockInterface $a, BlockInterface $b) {
             if ($a->getPriority() === $b->getPriority()) {
                 return 0;
             }

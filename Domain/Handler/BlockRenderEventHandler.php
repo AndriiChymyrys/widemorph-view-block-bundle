@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Handler;
 
 use Twig\Environment;
-use WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockInterface;
 use WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Block\BlockManagerInterface;
 use WideMorph\Morph\Bundle\MorphViewBlockBundle\Domain\Event\BlockRenderEvent;
+use WideMorph\Morph\Bundle\MorphViewBlockBundle\Interaction\Contract\BlockInterface;
 
 /**
  * Class BlockRenderEventHandler
